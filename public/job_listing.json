@@ -1,0 +1,436 @@
+{
+  "jobListings": [
+    {
+      "id": 1,
+      "title": "Founding AI Engineer [GenAI/LLM's]",
+      "company": "Oryx Search",
+      "location": "Dubai, United Arab Emirates",
+      "logo": "https://via.placeholder.com/40/4285f4/ffffff?text=O",
+      "featured": true,
+      "highlighted": false,
+      "salary": "$120K - $150K",
+      "salaryMin": 120000,
+      "salaryMax": 150000,
+      "type": "Full-time",
+      "datePosted": "2024-06-01",
+      "remote": true,
+      "category": "Software & Engineering",
+      "description": "Lead the development of GenAI/LLM solutions for global clients. Collaborate with cross-functional teams to deliver innovative AI products.",
+      "aboutJob": "At Oryx Search, we believe in pushing the boundaries of artificial intelligence to create solutions that transform how businesses operate. As a Founding AI Engineer, you'll be at the forefront of GenAI and LLM development, working with cutting-edge technologies to build products that will shape the future of AI-powered search and discovery.",
+      "roleDescription": "As a Founding AI Engineer, you will be a key member of our founding team, responsible for architecting and implementing AI systems that leverage the latest in Generative AI and Large Language Models. You'll work closely with our product and engineering teams to deliver innovative solutions that exceed client expectations.",
+      "responsibilities": [
+        "Design and implement GenAI/LLM solutions for enterprise clients",
+        "Collaborate with cross-functional teams to define AI product requirements",
+        "Optimize model performance and ensure scalability of AI systems",
+        "Stay current with latest developments in AI/ML and implement best practices",
+        "Mentor junior engineers and contribute to technical decision-making",
+        "Work with data scientists to improve model accuracy and efficiency",
+        "Implement robust testing and monitoring for AI systems",
+        "Contribute to the company's AI strategy and technical roadmap"
+      ],
+      "requirements": [
+        "5+ years experience in software engineering with focus on AI/ML",
+        "Expert-level proficiency in Python and AI/ML frameworks (TensorFlow, PyTorch)",
+        "Hands-on experience with LLMs and GenAI technologies",
+        "Strong understanding of machine learning algorithms and deep learning",
+        "Experience with cloud platforms (AWS, GCP, Azure) and MLOps",
+        "Excellent problem-solving and analytical skills",
+        "Strong communication skills and ability to work in a fast-paced startup environment",
+        "Experience with vector databases and embedding technologies"
+      ],
+      "jobRequirements": [
+        "Master's or PhD in Computer Science, AI, or related field preferred",
+        "Minimum 5 years of experience in AI/ML engineering",
+        "Proven track record of deploying AI systems in production",
+        "Experience with transformer architectures and attention mechanisms",
+        "Knowledge of prompt engineering and fine-tuning techniques",
+        "Familiarity with distributed computing and parallel processing",
+        "Experience with API design and microservices architecture",
+        "Strong background in statistics and mathematical modeling"
+      ],
+      "benefits": [
+        "Visa Sponsorship and relocation assistance",
+        "Remote work flexibility with Dubai office access",
+        "Comprehensive health insurance coverage",
+        "Equity package with significant upside potential",
+        "Professional development budget for conferences and training",
+        "State-of-the-art equipment and technology stack",
+        "Flexible working hours and unlimited PTO policy"
+      ],
+      "salaryBenefits": "Join us in Dubai and enjoy a competitive tax-free salary ranging from $120K to $150K annually, plus equity participation in a high-growth AI startup. We offer comprehensive benefits including health insurance, visa sponsorship, and the opportunity to work with cutting-edge AI technologies.",
+      "financial": {
+        "salary": "$120K - $150K",
+        "taxInfo": "Zero income tax location"
+      },
+      "accessibility": {
+        "workType": "Remote/Hybrid",
+        "visaProvided": true,
+        "applyFromAbroad": true
+      },
+      "jobRequirementsSimple": {
+        "experience": "Senior - 5+ years",
+        "language": "English - Professional"
+      },
+      "requiredSkills": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Python Programming",
+        "GenAI/LLM Development",
+        "Cloud Computing",
+        "Data Science"
+      ],
+      "tags": [
+        { "label": "Software & Engineering", "type": "category" },
+        { "label": "$120K - $150K", "type": "salary" },
+        { "label": "Apply from Abroad", "type": "benefit" },
+        { "label": "Remote Work", "type": "benefit" },
+        { "label": "Visa Sponsorship", "type": "benefit" },
+        { "label": "Equity Package", "type": "benefit" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Senior Software Engineer",
+      "company": "Emirates",
+      "location": "Dubai, United Arab Emirates",
+      "logo": "https://via.placeholder.com/40/dc2626/ffffff?text=E",
+      "featured": false,
+      "highlighted": false,
+      "salary": "$100K - $130K",
+      "salaryMin": 100000,
+      "salaryMax": 130000,
+      "type": "Full-time",
+      "datePosted": "2024-05-20",
+      "remote": false,
+      "category": "Software & Engineering",
+      "description": "Work on mission-critical systems for a leading airline. Mentor junior engineers and ensure code quality.",
+      "aboutJob": "At Emirates, we believe in connecting the world through our global hub in Dubai and constantly innovating to ensure our customers 'Fly Better'. Emirates Group IT thrives on the advancement of technology and is always at the forefront of aviation innovation. We are looking for exceptional IT professionals to fortify our position as leaders in the industry.",
+      "roleDescription": "As a Senior Software Engineer, you will be a fully participating member of an agile feature team, independently working on software development and problem resolution. The role involves technical design, software development, implementation, and maintenance of software solutions/products that support the Emirates Group business.",
+      "responsibilities": [
+        "Work with senior technical engineers in the technical design process by contributing to analyzing technical application requirements",
+        "Convert technical solutions for small to medium-sized initiatives into low-level design and working code",
+        "Implement clean, secure and optimized code while implementing Emirates Group approved coding standards",
+        "Participate in rotational on-call support, actively resolving production issues within SLAs with minimal supervision",
+        "Ensure built-in quality and 100% unit testing as part of the CI/CD pipeline",
+        "Perform thorough peer code reviews and provide constructive feedback",
+        "Promote refactoring practices to ensure minimum code debt",
+        "Implement logging and monitoring hooks in code development",
+        "Continuously stay current with relevant technologies and enhance code quality",
+        "Adhere to the Emirates Group IT coding standards and contribute to Software Engineering Playbooks"
+      ],
+      "requirements": [
+        "4+ years experience in backend development",
+        "Proficient in Java or C# with enterprise-level experience",
+        "Experience with cloud platforms (AWS, Azure, Google Cloud)",
+        "Strong knowledge of microservices architecture",
+        "Excellent communication and mentoring skills"
+      ],
+      "jobRequirements": [
+        "Degree or Honours in a relevant field (Computer Science, Computational Mathematics, Computer Engineering, or Software Engineering)",
+        "Minimum 5 years of experience in Backend Application Development, primarily in Java (versions 8+) with microservices capability",
+        "Backend Technologies: Java 8+, Spring, Spring Boot, RestFul API, SOAP, Microservices, Design Patterns",
+        "Frontend Technologies: React JS",
+        "Database Technologies: Relational (Oracle, SQL Server, Postgres); NoSQL (Couchbase, MongoDB, Elastic Search, Cassandra)",
+        "Cloud Technologies: AWS, Azure, Google Cloud",
+        "DevOps: Git, Docker, OpenShift, Kubernetes, Jenkins, Splunk, JIRA, Confluence",
+        "Testing: Unit, Integration, Performance, Security",
+        "Automation Testing: Jasmine, Jest, Karma, Junit, mockito, Jmock, Jmeter",
+        "Experience in developing complex technology software solutions for large organizations and providing production support using ITIL framework",
+        "Data experience in Full stack development, technology evaluation, vendor selection, and implementation",
+        "Familiarity with contemporary engineering practices like CI/CD, managing technology platforms, and ensuring a robust code base"
+      ],
+      "benefits": [
+        "Competitive salary and career advancement opportunities",
+        "Comprehensive health insurance plans",
+        "Generous travel benefits and flight discounts",
+        "Culturally diverse work environment",
+        "Annual performance bonus",
+        "Professional development opportunities"
+      ],
+      "salaryBenefits": "Join us in Dubai and enjoy an attractive tax-free salary, travel benefits exclusive to our industry, including discounts on flights and hotel stays worldwide.",
+      "financial": {
+        "salary": "$100K - $130K",
+        "taxInfo": "Zero income tax location"
+      },
+      "accessibility": {
+        "workType": "Office Only",
+        "visaProvided": true,
+        "applyFromAbroad": true
+      },
+      "jobRequirementsSimple": {
+        "experience": "Senior - 5+ years",
+        "language": "English - Professional"
+      },
+      "requiredSkills": [
+        "Software & Engineering",
+        "Java Development",
+        "Microservices",
+        "Cloud Computing",
+        "Backend Development",
+        "System Architecture"
+      ],
+      "tags": [
+        { "label": "Software & Engineering", "type": "category" },
+        { "label": "$100K - $130K", "type": "salary" },
+        { "label": "Apply from Abroad", "type": "benefit" },
+        { "label": "Support", "type": "benefit" },
+        { "label": "Visa Sponsorship", "type": "benefit" },
+        { "label": "37% Chance of Promotion", "type": "benefit" },
+        { "label": "2 Year Retention", "type": "benefit" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Senior Software Engineer",
+      "company": "Emirates",
+      "location": "Dubai, United Arab Emirates",
+      "logo": "https://via.placeholder.com/40/dc2626/ffffff?text=E",
+      "featured": false,
+      "highlighted": false,
+      "salary": "$100K - $130K",
+      "salaryMin": 100000,
+      "salaryMax": 130000,
+      "type": "Full-time",
+      "datePosted": "2024-05-15",
+      "remote": false,
+      "category": "Software & Engineering",
+      "description": "Develop and maintain scalable web applications. Collaborate with product managers and designers.",
+      "aboutJob": "Emirates Group IT is seeking a talented Senior Software Engineer to join our web development team. You'll be working on customer-facing applications that serve millions of passengers worldwide, ensuring they have the best digital experience when planning and booking their travels.",
+      "roleDescription": "As a Senior Software Engineer focusing on web development, you'll be responsible for creating and maintaining scalable, high-performance web applications. You'll work closely with UX/UI designers, product managers, and other engineers to deliver exceptional user experiences.",
+      "responsibilities": [
+        "Develop and maintain responsive web applications using modern frameworks",
+        "Collaborate with product managers and designers to implement user-friendly interfaces",
+        "Optimize applications for maximum speed and scalability",
+        "Implement and maintain automated testing suites",
+        "Participate in code reviews and maintain coding standards",
+        "Work with backend teams to integrate APIs and services",
+        "Monitor application performance and troubleshoot issues",
+        "Stay updated with latest web development trends and technologies"
+      ],
+      "requirements": [
+        "3+ years experience in web development",
+        "Strong knowledge of React or Angular frameworks",
+        "Proficiency in JavaScript, HTML5, and CSS3",
+        "Familiarity with REST APIs and GraphQL",
+        "Experience with responsive design principles"
+      ],
+      "jobRequirements": [
+        "Bachelor's degree in Computer Science or related field",
+        "Minimum 3 years of experience in frontend web development",
+        "Expert knowledge of React.js or Angular framework",
+        "Strong proficiency in JavaScript (ES6+), HTML5, CSS3",
+        "Experience with state management libraries (Redux, MobX, NgRx)",
+        "Knowledge of build tools (Webpack, Gulp, npm/yarn)",
+        "Familiarity with version control systems (Git)",
+        "Understanding of responsive design and cross-browser compatibility",
+        "Experience with testing frameworks (Jest, Cypress, Jasmine)",
+        "Knowledge of web performance optimization techniques"
+      ],
+      "benefits": [
+        "Flexible working hours",
+        "Comprehensive health insurance",
+        "Professional development budget",
+        "Travel benefits and discounts",
+        "Modern development tools and equipment"
+      ],
+      "salaryBenefits": "Enjoy a competitive tax-free salary in Dubai with flexible working arrangements and comprehensive benefits package including health insurance and travel perks.",
+      "financial": {
+        "salary": "$100K - $130K",
+        "taxInfo": "Zero income tax location"
+      },
+      "accessibility": {
+        "workType": "Hybrid",
+        "visaProvided": true,
+        "applyFromAbroad": true
+      },
+      "jobRequirementsSimple": {
+        "experience": "Mid-Senior - 3+ years",
+        "language": "English - Professional"
+      },
+      "requiredSkills": [
+        "React Development",
+        "JavaScript",
+        "Frontend Development",
+        "Web Applications",
+        "UI/UX Implementation",
+        "API Integration"
+      ],
+      "tags": [
+        { "label": "Software & Engineering", "type": "category" },
+        { "label": "$100K - $130K", "type": "salary" },
+        { "label": "Apply from Abroad", "type": "benefit" },
+        { "label": "Flexible Hours", "type": "benefit" },
+        { "label": "Visa Sponsorship", "type": "benefit" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Senior Software Engineer",
+      "company": "Emirates",
+      "location": "Dubai, United Arab Emirates",
+      "logo": "https://via.placeholder.com/40/dc2626/ffffff?text=E",
+      "featured": false,
+      "highlighted": false,
+      "salary": "$100K - $130K",
+      "salaryMin": 100000,
+      "salaryMax": 130000,
+      "type": "Full-time",
+      "datePosted": "2024-05-10",
+      "remote": false,
+      "category": "Software & Engineering",
+      "description": "Maintain and optimize airline booking systems. Ensure high availability and performance.",
+      "aboutJob": "Join Emirates' core systems team responsible for maintaining and enhancing the airline's critical booking and reservation systems. These systems handle millions of transactions daily and require the highest levels of reliability and performance.",
+      "roleDescription": "As a Senior Software Engineer on the booking systems team, you'll be responsible for maintaining, optimizing, and enhancing mission-critical airline systems. You'll work with high-volume, high-availability systems that serve customers worldwide.",
+      "responsibilities": [
+        "Maintain and optimize airline booking and reservation systems",
+        "Ensure high availability and performance of critical systems",
+        "Implement system monitoring and alerting mechanisms",
+        "Troubleshoot and resolve production issues quickly",
+        "Collaborate with database administrators for query optimization",
+        "Participate in system architecture decisions and improvements",
+        "Implement security best practices for sensitive customer data",
+        "Document system processes and maintain technical documentation"
+      ],
+      "requirements": [
+        "5+ years experience in enterprise systems development",
+        "Strong knowledge of SQL and NoSQL databases",
+        "Experience with microservices architecture",
+        "Understanding of high-availability system design",
+        "Experience with performance optimization"
+      ],
+      "jobRequirements": [
+        "Bachelor's degree in Computer Science or Engineering",
+        "Minimum 5 years of experience in enterprise software development",
+        "Strong expertise in database technologies (Oracle, SQL Server, MongoDB)",
+        "Experience with microservices and distributed systems architecture",
+        "Knowledge of caching strategies and performance optimization",
+        "Familiarity with message queuing systems (RabbitMQ, Apache Kafka)",
+        "Experience with monitoring tools (New Relic, Datadog, Splunk)",
+        "Understanding of airline industry systems (GDS, PSS) is a plus",
+        "Experience with high-volume transaction processing",
+        "Knowledge of security best practices for financial transactions"
+      ],
+      "benefits": [
+        "Annual performance bonus",
+        "Comprehensive health insurance",
+        "Flight benefits and travel discounts",
+        "Professional certification support",
+        "Career advancement opportunities"
+      ],
+      "salaryBenefits": "Competitive tax-free salary with annual bonus potential, comprehensive benefits, and the opportunity to work on systems that impact millions of travelers worldwide.",
+      "financial": {
+        "salary": "$100K - $130K",
+        "taxInfo": "Zero income tax location"
+      },
+      "accessibility": {
+        "workType": "Office Only",
+        "visaProvided": true,
+        "applyFromAbroad": true
+      },
+      "jobRequirementsSimple": {
+        "experience": "Senior - 5+ years",
+        "language": "English - Professional"
+      },
+      "requiredSkills": [
+        "Enterprise Systems",
+        "Database Management",
+        "System Optimization",
+        "High Availability",
+        "Performance Tuning",
+        "Microservices"
+      ],
+      "tags": [
+        { "label": "Software & Engineering", "type": "category" },
+        { "label": "$100K - $130K", "type": "salary" },
+        { "label": "Apply from Abroad", "type": "benefit" },
+        { "label": "Annual Bonus", "type": "benefit" },
+        { "label": "Visa Sponsorship", "type": "benefit" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Senior Software Engineer",
+      "company": "Emirates",
+      "location": "Dubai, United Arab Emirates",
+      "logo": "https://via.placeholder.com/40/dc2626/ffffff?text=E",
+      "featured": false,
+      "highlighted": true,
+      "salary": "$100K - $130K",
+      "salaryMin": 100000,
+      "salaryMax": 130000,
+      "type": "Full-time",
+      "datePosted": "2024-05-05",
+      "remote": false,
+      "category": "Software & Engineering",
+      "description": "Lead a team of engineers to deliver high-quality software. Drive technical innovation.",
+      "aboutJob": "Emirates is looking for a Senior Software Engineer with leadership experience to join our innovation team. You'll lead a team of talented engineers while driving technical excellence and innovation across our software development initiatives.",
+      "roleDescription": "As a Senior Software Engineer with leadership responsibilities, you'll guide a team of engineers in delivering high-quality software solutions. You'll be responsible for technical decision-making, mentoring team members, and ensuring best practices are followed.",
+      "responsibilities": [
+        "Lead and mentor a team of software engineers",
+        "Drive technical innovation and best practices adoption",
+        "Participate in architectural decisions and technical planning",
+        "Conduct code reviews and ensure quality standards",
+        "Collaborate with product managers on feature planning",
+        "Identify and implement process improvements",
+        "Provide technical guidance and support to team members",
+        "Represent the team in cross-functional meetings and planning sessions"
+      ],
+      "requirements": [
+        "6+ years experience in software development",
+        "Proven leadership and mentoring experience",
+        "Strong coding and system architecture skills",
+        "Experience with agile development methodologies",
+        "Excellent communication and interpersonal skills"
+      ],
+      "jobRequirements": [
+        "Bachelor's or Master's degree in Computer Science or related field",
+        "Minimum 6 years of software development experience",
+        "At least 2 years of team leadership or mentoring experience",
+        "Strong technical skills in multiple programming languages",
+        "Experience with software architecture and design patterns",
+        "Knowledge of agile development methodologies (Scrum, Kanban)",
+        "Excellent communication and presentation skills",
+        "Experience with performance management and team development",
+        "Understanding of software development lifecycle and best practices",
+        "Ability to balance technical and business requirements"
+      ],
+      "benefits": [
+        "Leadership development programs",
+        "Performance-based bonuses",
+        "Comprehensive health insurance",
+        "Career advancement opportunities",
+        "Professional conference attendance",
+        "Team building and training budgets"
+      ],
+      "salaryBenefits": "Competitive tax-free salary with leadership bonuses, comprehensive benefits package, and opportunities for professional growth in a leadership role within a global organization.",
+      "financial": {
+        "salary": "$100K - $130K",
+        "taxInfo": "Zero income tax location"
+      },
+      "accessibility": {
+        "workType": "Office Only",
+        "visaProvided": true,
+        "applyFromAbroad": true
+      },
+      "jobRequirementsSimple": {
+        "experience": "Senior - 6+ years",
+        "language": "English - Professional"
+      },
+      "requiredSkills": [
+        "Team Leadership",
+        "Software Architecture",
+        "Mentoring",
+        "Technical Innovation",
+        "Project Management",
+        "Agile Methodologies"
+      ],
+      "tags": [
+        { "label": "Software & Engineering", "type": "category" },
+        { "label": "$100K - $130K", "type": "salary" },
+        { "label": "Leadership Role", "type": "benefit" },
+        { "label": "Apply from Abroad", "type": "benefit" },
+        { "label": "Visa Sponsorship", "type": "benefit" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+{
+    "companies": [
+      {
+        "id": 1,
+        "name": "Emirates",
+        "tagline": "Fly Better with Emirates",
+        "logo": "https://via.placeholder.com/80/dc2626/ffffff?text=Emirates",
+        "jobListings": 1236,
+        "industry": "Aviation",
+        "industryDetails": "Aviation",
+        "location": "Dubai, UAE",
+        "headquarters": "Dubai, UAE",
+        "description": "Emirates is one of the world's largest international airlines, connecting people and places across six continents.",
+        "founded": 1985,
+        "foundedYear": 1985,
+        "employees": "100,000+",
+        "about": "Emirates, the flagship carrier of Dubai, United Arab Emirates, is renowned for its commitment to excellence and innovation in the aviation industry. Since our inception in 1985, we have been dedicated to providing an unparalleled flying experience, connecting passengers to over 150 destinations across six continents with our state-of-the-art fleet, including the iconic Airbus A380 and Boeing 777. As a subsidiary of The Emirates Group, wholly owned by the Investment Corporation of Dubai, we take pride in our role as a global leader in air travel, continuously striving to enhance our services and expand our reach.",
+        "benefits": [
+          "Competitive Salaries: Attractive compensation packages that reflect the skills and contributions of our team members.",
+          "Health and Wellness: Comprehensive health insurance plans to ensure the physical and mental well-being of our employees and their families.",
+          "Career Development: Opportunities for continuous learning and advancement, enabling our team to excel in their roles and achieve their career aspirations.",
+          "Travel Perks: Generous travel benefits, allowing our employees to explore the world and experience new cultures.",
+          "Cultural Diversity: A multicultural work environment that fosters inclusivity and collaboration among employees from various backgrounds."
+        ],
+        "jobs": [
+          {
+            "id": 2,
+            "title": "Senior Software Engineer",
+            "company": "Emirates",
+            "location": "Dubai, United Arab Emirates",
+            "logo": "https://via.placeholder.com/40/dc2626/ffffff?text=E",
+            "salary": "$100K - $130K",
+            "category": "Software & Engineering",
+            "tags": [
+              { "label": "Software & Engineering", "type": "category" },
+              { "label": "$100K - $130K", "type": "salary" },
+              { "label": "Apply from Abroad", "type": "benefit" },
+              { "label": "Support", "type": "benefit" },
+              { "label": "Visa Sponsorship", "type": "benefit" }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Senior Software Engineer",
+            "company": "Emirates",
+            "location": "Dubai, United Arab Emirates",
+            "logo": "https://via.placeholder.com/40/dc2626/ffffff?text=E",
+            "salary": "$100K - $130K",
+            "category": "Software & Engineering",
+            "tags": [
+              { "label": "Software & Engineering", "type": "category" },
+              { "label": "$100K - $130K", "type": "salary" },
+              { "label": "Apply from Abroad", "type": "benefit" },
+              { "label": "Support", "type": "benefit" },
+              { "label": "Visa Sponsorship", "type": "benefit" }
+            ]
+          },
+          {
+            "id": 4,
+            "title": "Senior Software Engineer",
+            "company": "Emirates",
+            "location": "Dubai, United Arab Emirates",
+            "logo": "https://via.placeholder.com/40/dc2626/ffffff?text=E",
+            "salary": "$100K - $130K",
+            "category": "Software & Engineering",
+            "tags": [
+              { "label": "Software & Engineering", "type": "category" },
+              { "label": "$100K - $130K", "type": "salary" },
+              { "label": "Apply from Abroad", "type": "benefit" },
+              { "label": "Support", "type": "benefit" },
+              { "label": "Visa Sponsorship", "type": "benefit" }
+            ]
+          },
+          {
+            "id": 5,
+            "title": "Senior Software Engineer",
+            "company": "Emirates",
+            "location": "Dubai, United Arab Emirates",
+            "logo": "https://via.placeholder.com/40/dc2626/ffffff?text=E",
+            "salary": "$100K - $130K",
+            "category": "Software & Engineering",
+            "tags": [
+              { "label": "Software & Engineering", "type": "category" },
+              { "label": "$100K - $130K", "type": "salary" },
+              { "label": "Apply from Abroad", "type": "benefit" },
+              { "label": "Support", "type": "benefit" },
+              { "label": "Visa Sponsorship", "type": "benefit" }
+            ]
+          },
+          {
+            "id": 6,
+            "title": "Senior Software Engineer",
+            "company": "Emirates",
+            "location": "Dubai, United Arab Emirates",
+            "logo": "https://via.placeholder.com/40/dc2626/ffffff?text=E",
+            "salary": "$100K - $130K",
+            "category": "Software & Engineering",
+            "tags": [
+              { "label": "Software & Engineering", "type": "category" },
+              { "label": "$100K - $130K", "type": "salary" },
+              { "label": "Apply from Abroad", "type": "benefit" },
+              { "label": "Support", "type": "benefit" },
+              { "label": "Visa Sponsorship", "type": "benefit" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Microsoft",
+        "tagline": "Empowering every person and organization",
+        "logo": "https://via.placeholder.com/80/0078d4/ffffff?text=MS",
+        "jobListings": 2847,
+        "industry": "Technology",
+        "location": "Redmond, USA",
+        "description": "Microsoft is a multinational technology corporation that develops, manufactures, licenses, supports, and sells computer software.",
+        "founded": 1975,
+        "employees": "220,000+"
+      },
+      {
+        "id": 3,
+        "name": "Google",
+        "tagline": "Organize the world's information",
+        "logo": "https://via.placeholder.com/80/4285f4/ffffff?text=G",
+        "jobListings": 3521,
+        "industry": "Technology",
+        "location": "Mountain View, USA",
+        "description": "Google is a multinational technology company that specializes in Internet-related services and products.",
+        "founded": 1998,
+        "employees": "180,000+"
+      },
+      {
+        "id": 4,
+        "name": "Amazon",
+        "tagline": "Work Hard. Have Fun. Make History.",
+        "logo": "https://via.placeholder.com/80/ff9900/ffffff?text=A",
+        "jobListings": 4892,
+        "industry": "E-commerce & Cloud",
+        "location": "Seattle, USA",
+        "description": "Amazon is a multinational technology company focusing on e-commerce, cloud computing, and artificial intelligence.",
+        "founded": 1994,
+        "employees": "1,500,000+"
+      },
+      {
+        "id": 5,
+        "name": "Apple",
+        "tagline": "Think Different",
+        "logo": "https://via.placeholder.com/80/000000/ffffff?text=🍎",
+        "jobListings": 2156,
+        "industry": "Technology",
+        "location": "Cupertino, USA",
+        "description": "Apple Inc. is an American multinational technology company that designs and develops consumer electronics.",
+        "founded": 1976,
+        "employees": "164,000+"
+      },
+      {
+        "id": 6,
+        "name": "Tesla",
+        "tagline": "Accelerating the world's transition to sustainable energy",
+        "logo": "https://via.placeholder.com/80/cc0000/ffffff?text=T",
+        "jobListings": 1789,
+        "industry": "Automotive & Energy",
+        "location": "Austin, USA",
+        "description": "Tesla, Inc. is an American electric vehicle and clean energy company.",
+        "founded": 2003,
+        "employees": "140,000+"
+      },
+      {
+        "id": 7,
+        "name": "Meta",
+        "tagline": "Connecting the world",
+        "logo": "https://via.placeholder.com/80/1877f2/ffffff?text=M",
+        "jobListings": 1654,
+        "industry": "Social Media & VR",
+        "location": "Menlo Park, USA",
+        "description": "Meta Platforms, Inc. is an American multinational technology conglomerate holding company.",
+        "founded": 2004,
+        "employees": "86,000+"
+      },
+      {
+        "id": 8,
+        "name": "Netflix",
+        "tagline": "Entertainment for everyone",
+        "logo": "https://via.placeholder.com/80/e50914/ffffff?text=N",
+        "jobListings": 892,
+        "industry": "Entertainment",
+        "location": "Los Gatos, USA",
+        "description": "Netflix is an American subscription streaming service and production company.",
+        "founded": 1997,
+        "employees": "12,000+"
+      },
+      {
+        "id": 9,
+        "name": "Spotify",
+        "tagline": "Music for everyone",
+        "logo": "https://via.placeholder.com/80/1db954/ffffff?text=♪",
+        "jobListings": 567,
+        "industry": "Music Streaming",
+        "location": "Stockholm, Sweden",
+        "description": "Spotify is a Swedish audio streaming and media services provider.",
+        "founded": 2006,
+        "employees": "9,000+"
+      },
+      {
+        "id": 10,
+        "name": "Salesforce",
+        "tagline": "The Customer Success Platform",
+        "logo": "https://via.placeholder.com/80/00a1e0/ffffff?text=SF",
+        "jobListings": 1234,
+        "industry": "Cloud Software",
+        "location": "San Francisco, USA",
+        "description": "Salesforce is an American cloud-based software company headquartered in San Francisco, California.",
+        "founded": 1999,
+        "employees": "79,000+"
+      },
+      {
+        "id": 11,
+        "name": "Adobe",
+        "tagline": "Changing the world through digital experiences",
+        "logo": "https://via.placeholder.com/80/ff0000/ffffff?text=Ai",
+        "jobListings": 987,
+        "industry": "Software",
+        "location": "San Jose, USA",
+        "description": "Adobe Inc. is an American multinational computer software company.",
+        "founded": 1982,
+        "employees": "26,000+"
+      },
+      {
+        "id": 12,
+        "name": "Uber",
+        "tagline": "Move the way you want",
+        "logo": "https://via.placeholder.com/80/000000/ffffff?text=U",
+        "jobListings": 1456,
+        "industry": "Transportation",
+        "location": "San Francisco, USA",
+        "description": "Uber Technologies, Inc. is an American mobility as a service provider.",
+        "founded": 2009,
+        "employees": "32,000+"
+      }
+    ]
+  }
+  

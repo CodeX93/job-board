@@ -1,0 +1,69 @@
+{
+    "topCompanies": [
+      {
+        "id": 1,
+        "name": "Canonical",
+        "logo": "canonical",
+        "jobCount": 1286,
+        "description": "We deliver open source to the world faster, more securely and more cost effectively than any other company. We're also...",
+        "color": "#E95420"
+      },
+      {
+        "id": 2,
+        "name": "Oracle",
+        "logo": "oracle",
+        "jobCount": 764,
+        "description": "Oracle is a global technology leader, delivering advanced cloud solutions and innovative software. Our work impacts...",
+        "color": "#F80000"
+      },
+      {
+        "id": 3,
+        "name": "Presight",
+        "logo": "presight",
+        "jobCount": 267,
+        "description": "Presight, an ADX-listed public company limited by shares whose majority shareholder is Abu Dhabi company G42, is the...",
+        "color": "#00A8E6"
+      },
+      {
+        "id": 4,
+        "name": "Amazon Web Services",
+        "logo": "aws",
+        "jobCount": 244,
+        "description": "Amazon Web Services (AWS) is a subsidiary of Amazon offering cloud computing platforms and APIs. AWS provides a broad...",
+        "color": "#232F3E"
+      },
+      {
+        "id": 5,
+        "name": "Emirates",
+        "logo": "emirates",
+        "jobCount": 227,
+        "description": "Emirates Airline, based in Dubai, is a global leader in aviation, known for its exceptional service and...",
+        "color": "#D32F2F"
+      },
+      {
+        "id": 6,
+        "name": "Talabat",
+        "logo": "talabat",
+        "jobCount": 222,
+        "description": "Talabat is the leading online food ordering company in the Middle East, founded in Kuwait in 2004. As a subsidiary of...",
+        "color": "#FF6B35"
+      },
+      {
+        "id": 7,
+        "name": "Core42",
+        "logo": "core42",
+        "jobCount": 212,
+        "description": "Core42 accelerates what people, enterprises, and nations can achieve with AI. As a full-spectrum AI enablement...",
+        "color": "#00D4AA"
+      },
+      {
+        "id": 8,
+        "name": "Cognizant",
+        "logo": "cognizant",
+        "jobCount": 177,
+        "description": "Cognizant is a global leader in business and technology services, helping clients bring the future of work to life....",
+        "color": "#0033A0"
+      }
+    ]
+  }
+  

@@ -1,0 +1,55 @@
+{
+    "jobs": [
+      {
+        "id": 1,
+        "title": "Founding AI Engineer (GenAI/LLM's)",
+        "company": "Oryx Search",
+        "location": "Dubai, United Arab Emirates",
+        "category": "Software & Engineering",
+        "salary": "$100K - $130K",
+        "tags": ["Apply from Abroad", "Support", "Visa Sponsorship", "37% Chance of Promotion", "2 Year Retention"],
+        "logo": "https://via.placeholder.com/40/4285f4/ffffff?text=O"
+      },
+      {
+        "id": 2,
+        "title": "Senior Software Engineer",
+        "company": "Emirates",
+        "location": "Dubai, United Arab Emirates",
+        "category": "Software & Engineering",
+        "salary": "$100K - $130K",
+        "tags": ["Apply from Abroad", "Support", "Visa Sponsorship", "37% Chance of Promotion", "2 Year Retention"],
+        "logo": "https://via.placeholder.com/40/dc2626/ffffff?text=E"
+      },
+      {
+        "id": 3,
+        "title": "Senior Software Engineer",
+        "company": "Emirates",
+        "location": "Dubai, United Arab Emirates",
+        "category": "Software & Engineering",
+        "salary": "$100K - $130K",
+        "tags": ["Apply from Abroad", "Support", "Visa Sponsorship", "37% Chance of Promotion", "2 Year Retention"],
+        "logo": "https://via.placeholder.com/40/dc2626/ffffff?text=E"
+      },
+      {
+        "id": 4,
+        "title": "Senior Software Engineer",
+        "company": "Emirates",
+        "location": "Dubai, United Arab Emirates",
+        "category": "Software & Engineering",
+        "salary": "$100K - $130K",
+        "tags": ["Apply from Abroad", "Support", "Visa Sponsorship", "37% Chance of Promotion", "2 Year Retention"],
+        "logo": "https://via.placeholder.com/40/dc2626/ffffff?text=E"
+      },
+      {
+        "id": 5,
+        "title": "Senior Software Engineer",
+        "company": "Emirates",
+        "location": "Dubai, United Arab Emirates",
+        "category": "Software & Engineering",
+        "salary": "$100K - $130K",
+        "tags": ["Apply from Abroad", "Support", "Visa Sponsorship", "37% Chance of Promotion", "2 Year Retention"],
+        "logo": "https://via.placeholder.com/40/dc2626/ffffff?text=E"
+      }
+    ]
+  }
+  

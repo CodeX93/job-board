@@ -1,0 +1,59 @@
+{
+    "popularJobs": [
+      {
+        "id": 1,
+        "title": "Founding AI Engineer",
+        "company": "Oryx Search",
+        "salary": "$100K - $130K",
+        "location": "Dubai, United Arab Emirates",
+        "tags": ["Apply from Abroad", "Support", "Visa Sponsorship", "Software & Engineering"]
+      },
+      {
+        "id": 2,
+        "title": "Senior Software Engineer",
+        "company": "Emirates",
+        "salary": "$80K - $120K",
+        "location": "Dubai, United Arab Emirates",
+        "tags": ["Apply from Abroad", "Support & IT", "Project Management", "Software & Engineering"]
+      },
+      {
+        "id": 3,
+        "title": "Founding AI Engineer",
+        "company": "Oryx Search",
+        "salary": "$100K - $130K",
+        "location": "Dubai, United Arab Emirates",
+        "tags": ["Apply from Abroad", "Support", "Visa Sponsorship", "Software & Engineering"]
+      },
+      {
+        "id": 4,
+        "title": "Senior Software Engineer",
+        "company": "Emirates",
+        "salary": "$80K - $120K",
+        "location": "Dubai, United Arab Emirates",
+        "tags": ["Apply from Abroad", "Project Management", "Software & Engineering"]
+      },
+      {
+        "id": 5,
+        "title": "Data Science Engineer",
+        "company": "Tech Solutions",
+        "salary": "$90K - $140K",
+        "location": "Dubai, United Arab Emirates",
+        "tags": ["Apply from Abroad", "Support", "Data Science", "Software & Engineering"]
+      }
+    ],
+    "statistics": [
+      {
+        "number": "120+",
+        "description": "Jobs posted this week"
+      },
+      {
+        "number": "250+",
+        "description": "applicants hired this week"
+      },
+      {
+        "number": "1K+",
+        "description": "applications made this week"
+      }
+    ]
+  }
+  
