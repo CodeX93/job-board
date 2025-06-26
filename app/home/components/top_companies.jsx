@@ -3,25 +3,23 @@
 import { useState, useEffect } from "react"
 import { Box, Container, Typography, Card, CardContent, Button, Avatar, useTheme } from "@mui/material"
 import { useRouter } from "next/navigation"
+import { fetchTopCompaniesDataClient } from "../../lib/data"
 
-const TopCompanies = () => {
-  const [companiesData, setCompaniesData] = useState(null)
+const TopCompanies = ({ initialData }) => {
+  const [companiesData, setCompaniesData] = useState(initialData)
   const theme = useTheme()
   const router = useRouter()
 
+  // Only fetch if no initial data provided (fallback for client-side rendering)
   useEffect(() => {
-    const fetchCompaniesData = async () => {
-      try {
-        const response = await fetch("/companies_data.json")
-        const data = await response.json()
+    if (!initialData) {
+      const fetchData = async () => {
+        const data = await fetchTopCompaniesDataClient()
         setCompaniesData(data)
-      } catch (error) {
-        console.error("Error fetching companies data:", error)
       }
+      fetchData()
     }
-
-    fetchCompaniesData()
-  }, [])
+  }, [initialData])
 
   const getCompanyLogo = (logoType, color, name) => {
     const logoProps = {

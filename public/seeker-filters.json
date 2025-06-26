@@ -1,0 +1,50 @@
+{
+  "categories": [
+    {
+      "name": "Software & Engineering",
+      "count": 4
+    },
+    {
+      "name": "Data & Analytics",
+      "count": 1
+    },
+    {
+      "name": "Product & Project Management",
+      "count": 3
+    },
+    {
+      "name": "Support & IT",
+      "count": 1
+    },
+    {
+      "name": "Security",
+      "count": 2
+    },
+    {
+      "name": "Sales & Business Development",
+      "count": 1
+    },
+    {
+      "name": "Design & UX",
+      "count": 1
+    }
+  ],
+  "experience": [
+    {
+      "name": "Senior",
+      "count": 4
+    },
+    {
+      "name": "Intermediate",
+      "count": 1
+    },
+    {
+      "name": "Junior",
+      "count": 0
+    },
+    {
+      "name": "Entry Level",
+      "count": 0
+    }
+  ]
+} 

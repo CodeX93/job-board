@@ -9,9 +9,10 @@ import Pagination from "./pagination"
 import JobDetailsModal from "./job-detailModal"
 import JobApplicationModal from "./job_application-modal"
 import Link from "next/link"
+import { fetchJobsDataClient } from "../../lib/data"
 
-export default function JobList({ selectedLocations, selectedCategories, selectedExperiences }) {
-  const [jobs, setJobs] = useState([])
+export default function JobList({ initialData, selectedLocations, selectedCategories, selectedExperiences }) {
+  const [jobs, setJobs] = useState(initialData?.jobListings || [])
   const [filteredJobs, setFilteredJobs] = useState([])
   const [displayedJobs, setDisplayedJobs] = useState([])
   const [searchTerm, setSearchTerm] = useState("")
@@ -24,19 +25,16 @@ export default function JobList({ selectedLocations, selectedCategories, selecte
   const jobsToShow = 8
   const [showCount, setShowCount] = useState(jobsToShow)
 
+  // Only fetch client-side if no initialData (fallback)
   useEffect(() => {
-    const fetchJobs = async () => {
-      try {
-        const response = await fetch("/job_listing.json")
-        const data = await response.json()
+    if (!initialData) {
+      const fetchData = async () => {
+        const data = await fetchJobsDataClient()
         setJobs(Array.isArray(data.jobListings) ? data.jobListings : [])
-      } catch (error) {
-        console.error("Error fetching jobs:", error)
-        setJobs([])
       }
+      fetchData()
     }
-    fetchJobs()
-  }, [])
+  }, [initialData])
 
   useEffect(() => {
     let filtered = Array.isArray(jobs) ? jobs : []

@@ -2,26 +2,24 @@
 
 import { useState, useEffect } from "react"
 import { Box, Container, Typography, Chip, useTheme, useMediaQuery } from "@mui/material"
+import { fetchSkillsDataClient } from "../../lib/data"
 
-const SkillsSection = () => {
-  const [skillsData, setSkillsData] = useState(null)
+const SkillsSection = ({ initialData }) => {
+  const [skillsData, setSkillsData] = useState(initialData)
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
   const isTablet = useMediaQuery(theme.breakpoints.down("md"))
 
+  // Only fetch if no initial data provided (fallback for client-side rendering)
   useEffect(() => {
-    const fetchSkillsData = async () => {
-      try {
-        const response = await fetch("/skills_data.json")
-        const data = await response.json()
+    if (!initialData) {
+      const fetchData = async () => {
+        const data = await fetchSkillsDataClient()
         setSkillsData(data)
-      } catch (error) {
-        console.error("Error fetching skills data:", error)
       }
+      fetchData()
     }
-
-    fetchSkillsData()
-  }, [])
+  }, [initialData])
 
   if (!skillsData) {
     return null

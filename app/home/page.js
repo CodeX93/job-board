@@ -1,23 +1,13 @@
+import { getJobsData, getTopCompaniesData, getSkillsData } from "../lib/data"
+import HomeClientPage from "./components/HomeClientPage"
 
-import HeroSection from "./components/herosection";
-import JobListings from "./components/joblisting";
-import SkillsSection from "./components/demand-skill";
-import TopCompanies from "./components/top_companies.jsx";
-import CTASection from "./components/CTA";
+export default async function Home() {
+  // Fetch data server-side with ISR
+  const [jobsData, topCompaniesData, skillsData] = await Promise.all([
+    getJobsData(),
+    getTopCompaniesData(),
+    getSkillsData()
+  ])
 
-export default function Home() {
-  return (
-    <div >
-      
-       
-       <HeroSection/>
-       <JobListings/>
-       <SkillsSection/>
-       <TopCompanies/>
-       <CTASection/>
-       
-      
-     
-    </div>
-  );
+  return <HomeClientPage jobsData={jobsData} companiesData={topCompaniesData} skillsData={skillsData} />
 }

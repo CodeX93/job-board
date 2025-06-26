@@ -16,27 +16,25 @@ import {
 } from "@mui/material"
 import FlashOnIcon from "@mui/icons-material/FlashOn"
 import { useRouter } from "next/navigation"
+import { fetchJobsDataClient } from "../../lib/data"
 
-const JobListings = () => {
-  const [jobsData, setJobsData] = useState(null)
+const JobListings = ({ initialData }) => {
+  const [jobsData, setJobsData] = useState(initialData)
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down("md"))
   const isTablet = useMediaQuery(theme.breakpoints.down("lg"))
   const router = useRouter()
 
+  // Only fetch if no initial data provided (fallback for client-side rendering)
   useEffect(() => {
-    const fetchJobsData = async () => {
-      try {
-        const response = await fetch("/job_listing.json")
-        const data = await response.json()
+    if (!initialData) {
+      const fetchData = async () => {
+        const data = await fetchJobsDataClient()
         setJobsData(data)
-      } catch (error) {
-        console.error("Error fetching jobs data:", error)
       }
+      fetchData()
     }
-
-    fetchJobsData()
-  }, [])
+  }, [initialData])
 
   const getCompanyLogo = (logoType) => {
     if (logoType === "oryx") {

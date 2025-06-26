@@ -3,30 +3,28 @@
 import { useState, useEffect } from "react"
 import { Box, Typography, Button, CircularProgress } from "@mui/material"
 import SeekerCard from "./seeker-card"
+import { fetchJobSeekersDataClient } from "../../lib/data"
 
-export default function SeekerList({ selectedCategory, selectedExperience }) {
-  const [seekers, setSeekers] = useState([])
+export default function SeekerList({ initialData, selectedCategory, selectedExperience }) {
+  const [seekers, setSeekers] = useState(initialData?.jobSeekers || [])
   const [filteredSeekers, setFilteredSeekers] = useState([])
   const [displayedSeekers, setDisplayedSeekers] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(!initialData)
   const [loadingMore, setLoadingMore] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
   const seekersPerPage = 3 // Changed from 9 to 3 to show the Load More button
 
+  // Only fetch client-side if no initialData (fallback)
   useEffect(() => {
-    const fetchSeekers = async () => {
-      try {
-        const response = await fetch("/job-seekers.json")
-        const data = await response.json()
+    if (!initialData) {
+      const fetchData = async () => {
+        const data = await fetchJobSeekersDataClient()
         setSeekers(data.jobSeekers)
         setLoading(false)
-      } catch (error) {
-        console.error("Error fetching seekers:", error)
-        setLoading(false)
       }
+      fetchData()
     }
-    fetchSeekers()
-  }, [])
+  }, [initialData])
 
   useEffect(() => {
     let filtered = seekers
