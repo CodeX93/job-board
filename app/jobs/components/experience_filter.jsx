@@ -21,7 +21,7 @@ export default function ExperienceFilter({ onExperienceChange }) {
   useEffect(() => {
     const fetchExperiences = async () => {
       try {
-        const response = await fetch("/data/filters.json")
+        const response = await fetch((process.env.NEXT_PUBLIC_API_URL || '') + '/data/filters.json')
         const data = await response.json()
         setExperiences(data.experience)
       } catch (error) {

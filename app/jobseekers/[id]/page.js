@@ -36,7 +36,7 @@ export default function SeekerDetailPage({ params }) {
   useEffect(() => {
     const fetchSeeker = async () => {
       try {
-        const response = await fetch("/job-seekers.json")
+        const response = await fetch((process.env.NEXT_PUBLIC_API_URL || '') + '/job-seekers.json')
         const data = await response.json()
 
         const foundSeeker = data.jobSeekers.find((s) => s.id === seekerId)

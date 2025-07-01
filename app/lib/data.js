@@ -1,7 +1,7 @@
 // Data fetching utilities for ISR
 import { getRevalidationInterval } from './isr-config';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
 
 export async function getJobsData() {
   try {
@@ -58,7 +58,7 @@ export async function getJobSeekersData() {
 // Client-side fallback functions
 export async function fetchJobsDataClient() {
   try {
-    const response = await fetch('/job_listing.json');
+    const response = await fetch((process.env.NEXT_PUBLIC_API_URL || '') + '/job_listing.json');
     if (!response.ok) throw new Error('Failed to fetch jobs data');
     return response.json();
   } catch (error) {
@@ -69,7 +69,7 @@ export async function fetchJobsDataClient() {
 
 export async function fetchCompaniesDataClient() {
   try {
-    const response = await fetch('/companies.json');
+    const response = await fetch((process.env.NEXT_PUBLIC_API_URL || '') + '/companies.json');
     if (!response.ok) throw new Error('Failed to fetch companies data');
     return response.json();
   } catch (error) {
@@ -80,7 +80,7 @@ export async function fetchCompaniesDataClient() {
 
 export async function fetchSkillsDataClient() {
   try {
-    const response = await fetch('/skills_data.json');
+    const response = await fetch((process.env.NEXT_PUBLIC_API_URL || '') + '/skills_data.json');
     if (!response.ok) throw new Error('Failed to fetch skills data');
     return response.json();
   } catch (error) {
@@ -91,7 +91,7 @@ export async function fetchSkillsDataClient() {
 
 export async function fetchJobSeekersDataClient() {
   try {
-    const response = await fetch('/job-seekers.json');
+    const response = await fetch((process.env.NEXT_PUBLIC_API_URL || '') + '/job-seekers.json');
     if (!response.ok) throw new Error('Failed to fetch job seekers data');
     return response.json();
   } catch (error) {
@@ -118,7 +118,7 @@ export async function getJobById(id) {
 
 export async function fetchJobByIdClient(id) {
   try {
-    const response = await fetch('/job_listing.json');
+    const response = await fetch((process.env.NEXT_PUBLIC_API_URL || '') + '/job_listing.json');
     if (!response.ok) throw new Error('Failed to fetch jobs data');
     const data = await response.json();
     const jobId = Number.parseInt(id);
@@ -148,7 +148,7 @@ export async function getCompanyById(id) {
 
 export async function fetchCompanyByIdClient(id) {
   try {
-    const response = await fetch('/companies.json');
+    const response = await fetch((process.env.NEXT_PUBLIC_API_URL || '') + '/companies.json');
     if (!response.ok) throw new Error('Failed to fetch companies data');
     const data = await response.json();
     const companyId = Number.parseInt(id);
@@ -175,7 +175,7 @@ export async function getTopCompaniesData() {
 
 export async function fetchTopCompaniesDataClient() {
   try {
-    const response = await fetch('/companies_data.json');
+    const response = await fetch((process.env.NEXT_PUBLIC_API_URL || '') + '/companies_data.json');
     if (!response.ok) throw new Error('Failed to fetch top companies data');
     return response.json();
   } catch (error) {

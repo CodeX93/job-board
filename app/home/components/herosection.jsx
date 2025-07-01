@@ -30,7 +30,7 @@ const HeroSection = () => {
   useEffect(() => {
     const fetchJobsData = async () => {
       try {
-        const response = await fetch("/job_data.json")
+        const response = await fetch((process.env.NEXT_PUBLIC_API_URL || '') + '/job_data.json')
         const data = await response.json()
         setJobsData(data)
       } catch (error) {

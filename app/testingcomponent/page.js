@@ -7,7 +7,7 @@ const JobBoard = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const API_URL = 'https://xego-gkh0-s2zi.f2.xano.io/api:b5rUlFxJ/jobs/for-you/public-job-board';
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || '/job_listing.json';
 
   // This is a public token, treated like an API key, not user auth
   const PUBLIC_TOKEN = 'eyJrdHkiOiJvY3QiLCJrIjoiVTFrNnl1eW5abUVybUhodkZITDYtbjhqZnB4VG9pOG5UX1lvZ2puOURtQnF6TjVVbGtZaC1WQldsLXJJMmZyOXRWdVlmYURFenFmZGVTNHNNdmdsMnJGWXpySFhwb2ZpOGJnTjJlbWkydHBGejlrUXE3aFhtcjAxcldZNDZXNUhIdWJhY0FIcWQ0dUluemlySzVRY283ZUxlcFdzVkVJS3hSWGxIY3hyWG9NIn0=';

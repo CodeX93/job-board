@@ -25,7 +25,7 @@ export default function SeekerFilterSidebar({ onCategoryChange, onExperienceChan
   useEffect(() => {
     const fetchFilters = async () => {
       try {
-        const response = await fetch("/seeker-filters.json")
+        const response = await fetch((process.env.NEXT_PUBLIC_API_URL || '') + '/seeker-filters.json')
         const data = await response.json()
         setFilters(data)
       } catch (error) {

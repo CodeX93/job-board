@@ -21,7 +21,7 @@ export default function LocationFilter({ onLocationChange }) {
   useEffect(() => {
     const fetchLocations = async () => {
       try {
-        const response = await fetch("/data/filters.json")
+        const response = await fetch((process.env.NEXT_PUBLIC_API_URL || '') + '/data/filters.json')
         const data = await response.json()
         setLocations(data.locations)
       } catch (error) {

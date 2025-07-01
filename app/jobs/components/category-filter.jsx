@@ -21,7 +21,7 @@ export default function CategoryFilter({ onCategoryChange }) {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch("/data/filters.json")
+        const response = await fetch((process.env.NEXT_PUBLIC_API_URL || '') + '/data/filters.json')
         const data = await response.json()
         setCategories(data.categories)
       } catch (error) {
