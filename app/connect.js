@@ -1,0 +1,1 @@
+export const NEXT_PUBLIC_API_URL='https://job-board-delta-eight.vercel.app'

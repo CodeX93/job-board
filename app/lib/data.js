@@ -1,10 +1,12 @@
 // Data fetching utilities for ISR
+import { NEXT_PUBLIC_API_URL } from '../connect';
 import { getRevalidationInterval } from './isr-config';
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+const BASE_URL = NEXT_PUBLIC_API_URL || 'http://localhost:3000';
 
 export async function getJobsData() {
   try {
+    console.log('BASE_URL', BASE_URL);
     const response = await fetch(`${BASE_URL}/job_listing.json`, {
       next: { revalidate: getRevalidationInterval('JOBS_DATA') }
     });
@@ -18,6 +20,7 @@ export async function getJobsData() {
 
 export async function getCompaniesData() {
   try {
+    console.log('BASE_URL', BASE_URL);
     const response = await fetch(`${BASE_URL}/companies.json`, {
       next: { revalidate: getRevalidationInterval('COMPANIES_DATA') }
     });
