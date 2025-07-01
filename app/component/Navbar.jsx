@@ -56,7 +56,7 @@ const Navbar = () => {
         }}
       >
         <Box sx={{ display: "flex", alignItems: "center" }}>
-          <Link href="/" style={{ textDecoration: "none" }}>
+          <Link href="/home" style={{ textDecoration: "none" }}>
             <Image
               src="/careerdna-logo.png"
               alt="CareerDNA Logo"

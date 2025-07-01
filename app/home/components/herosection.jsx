@@ -18,6 +18,7 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos"
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos"
 import LocationOnIcon from "@mui/icons-material/LocationOn"
 import { useRouter } from "next/navigation"
+import { NEXT_PUBLIC_API_URL } from "../../connect"
 
 const HeroSection = () => {
   const [jobsData, setJobsData] = useState(null)
@@ -26,11 +27,12 @@ const HeroSection = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"))
   const isTablet = useMediaQuery(theme.breakpoints.down("lg"))
   const router = useRouter()
+  const BASE_URL = NEXT_PUBLIC_API_URL || 'http://localhost:3000';
 
   useEffect(() => {
     const fetchJobsData = async () => {
       try {
-        const response = await fetch((process.env.NEXT_PUBLIC_API_URL || '') + '/job_data.json')
+        const response = await fetch(BASE_URL + '/job_data.json')
         const data = await response.json()
         setJobsData(data)
       } catch (error) {
