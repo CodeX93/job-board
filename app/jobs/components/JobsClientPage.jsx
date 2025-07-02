@@ -1,6 +1,7 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useCallback } from "react"
 import { Container, Typography, Box, Grid } from "@mui/material"
 import { ThemeProvider, createTheme } from "@mui/material/styles"
 import CssBaseline from "@mui/material/CssBaseline"
@@ -25,6 +26,43 @@ export default function JobsClientPage({ initialData }) {
   const [selectedLocations, setSelectedLocations] = useState([])
   const [selectedCategories, setSelectedCategories] = useState([])
   const [selectedExperiences, setSelectedExperiences] = useState([])
+  const [jobs, setJobs] = useState(initialData?.jobListings || [])
+  const [filterOptions, setFilterOptions] = useState({ locations: [], categories: [], experience: [] })
+  const [locationCounts, setLocationCounts] = useState([])
+  const [categoryCounts, setCategoryCounts] = useState([])
+  const [experienceCounts, setExperienceCounts] = useState([])
+
+  // Load filter options from filter.json on mount
+  useEffect(() => {
+    fetch('/filter.json')
+      .then(res => res.json())
+      .then(data => setFilterOptions(data))
+      .catch(() => setFilterOptions({ locations: [], categories: [], experience: [] }))
+  }, [])
+
+  // Calculate dynamic counts for each filter option from jobs data
+  useEffect(() => {
+    // Locations
+    const locs = filterOptions.locations.map(opt => {
+      const count = jobs.filter(job => job.location === opt.name).length
+      return { ...opt, count }
+    })
+    setLocationCounts(locs)
+
+    // Categories
+    const cats = filterOptions.categories.map(opt => {
+      const count = jobs.filter(job => job.category === opt.name).length
+      return { ...opt, count }
+    })
+    setCategoryCounts(cats)
+
+    // Experience
+    const exps = filterOptions.experience.map(opt => {
+      const count = jobs.filter(job => (job.jobRequirementsSimple && job.jobRequirementsSimple.experience === opt.name)).length
+      return { ...opt, count }
+    })
+    setExperienceCounts(exps)
+  }, [jobs, filterOptions])
 
   return (
     <ThemeProvider theme={theme}>
@@ -40,6 +78,9 @@ export default function JobsClientPage({ initialData }) {
                 onLocationChange={setSelectedLocations}
                 onCategoryChange={setSelectedCategories}
                 onExperienceChange={setSelectedExperiences}
+                locations={locationCounts}
+                categories={categoryCounts}
+                experiences={experienceCounts}
               />
             </Grid>
             <Grid item xs={12} md={9} lg={9}>

@@ -13,23 +13,10 @@ import {
   Box,
 } from "@mui/material"
 import { ExpandMore } from "@mui/icons-material"
+import { NEXT_PUBLIC_API_URL } from "../../connect"
 
-export default function ExperienceFilter({ onExperienceChange }) {
-  const [experiences, setExperiences] = useState([])
+export default function ExperienceFilter({ onExperienceChange, experiences = [] }) {
   const [selectedExperience, setSelectedExperience] = useState("")
-
-  useEffect(() => {
-    const fetchExperiences = async () => {
-      try {
-        const response = await fetch((process.env.NEXT_PUBLIC_API_URL || '') + '/data/filters.json')
-        const data = await response.json()
-        setExperiences(data.experience)
-      } catch (error) {
-        setExperiences([])
-      }
-    }
-    fetchExperiences()
-  }, [])
 
   const handleExperienceChange = (event) => {
     setSelectedExperience(event.target.value)
@@ -37,27 +24,74 @@ export default function ExperienceFilter({ onExperienceChange }) {
   }
 
   return (
-    <Accordion defaultExpanded sx={{ boxShadow: "none", '&:before': { display: 'none' }, mb: 2 }}>
+    <Accordion defaultExpanded sx={{
+      boxShadow: "none",
+      '&:before': { display: 'none' },
+      mb: 1.5,
+      borderRadius: 1.5,
+    }}>
       <AccordionSummary expandIcon={<ExpandMore />}>
-        <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>Experience</Typography>
+        <Typography variant="subtitle2" sx={{ fontWeight: 700, fontSize: 15 }}>
+          Experience
+        </Typography>
       </AccordionSummary>
       <AccordionDetails sx={{ p: 0 }}>
-        <RadioGroup value={selectedExperience} onChange={handleExperienceChange}>
-          {experiences.map((experience) => (
-            <FormControlLabel
-              key={experience.name}
-              value={experience.name}
-              control={<Radio size="small" />}
-              label={
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-                  <Typography variant="body2">{experience.name}</Typography>
-                  <Chip label={experience.count} size="small" color="primary" sx={{ ml: 1, fontWeight: 600 }} />
-                </Box>
+        {experiences.map((experience) => (
+          <Box
+            key={experience.name}
+            sx={{
+              display: 'grid',
+              gridTemplateColumns: '20% 60% 20%',
+              alignItems: 'center',
+              width: '100%',
+              mb: 0.5,
+              pl: 1,
+              pr: 1,
+              cursor: 'pointer',
+              borderRadius: 1,
+              minHeight: 24,
+              transition: 'background 0.2s',
+              '&:hover': { background: '#f3f4f6' },
+              py: 0.1,
+            }}
+            onClick={(e) => {
+              if (e.target.type !== 'radio') {
+                setSelectedExperience(experience.name);
+                onExperienceChange([experience.name]);
               }
-              sx={{ m: 0, pl: 1, pr: 1, width: '100%' }}
+            }}
+          >
+            <Radio
+              size="small"
+              checked={selectedExperience === experience.name}
+              value={experience.name}
+              onChange={handleExperienceChange}
             />
-          ))}
-        </RadioGroup>
+            <Typography
+              variant="body2"
+              sx={{
+                fontSize: 14,
+                whiteSpace: "normal",
+                wordBreak: "break-word",
+                pr: 1,
+              }}
+            >
+              {experience.name}
+            </Typography>
+            <Typography
+              variant="body2"
+              sx={{
+                color: "#1976d2",
+                fontWeight: 700,
+                fontSize: 14,
+                textAlign: "right",
+                pl: 1,
+              }}
+            >
+              {experience.count}
+            </Typography>
+          </Box>
+        ))}
       </AccordionDetails>
     </Accordion>
   )

@@ -59,10 +59,12 @@ export default function JobList({ initialData, selectedLocations, selectedCatego
       filtered = filtered.filter((job) => selectedCategories.includes(job.category))
     }
 
-    // Filter by experience (simplified logic)
+    // Filter by experience
     if (selectedExperiences.length > 0) {
-      // This is a simplified filter - in real app, you'd have experience levels in job data
-      filtered = filtered.filter(() => true) // Keep all for now
+      filtered = filtered.filter(job => {
+        const exp = job.jobRequirementsSimple && job.jobRequirementsSimple.experience;
+        return selectedExperiences.includes(exp);
+      });
     }
 
     // Sort jobs
@@ -149,7 +151,7 @@ export default function JobList({ initialData, selectedLocations, selectedCatego
 
       <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
 
-      <JobDetailsModal
+      {/* <JobDetailsModal
         job={selectedJob}
         isOpen={showJobDetails}
         onClose={() => {
@@ -157,7 +159,7 @@ export default function JobList({ initialData, selectedLocations, selectedCatego
           setSelectedJob(null)
         }}
         onApply={handleApplyClick}
-      />
+      /> */}I
 
       <JobApplicationModal
         job={selectedJob}

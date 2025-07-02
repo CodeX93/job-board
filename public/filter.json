@@ -6,7 +6,9 @@
       { "name": "Jeddah, Saudi Arabia", "count": 29 },
       { "name": "Neom, Saudi Arabia", "count": 89 },
       { "name": "Dammam, Saudi Arabia", "count": 14 },
-      { "name": "Sharjah, United Arab Emirates", "count": 19 }
+      { "name": "Sharjah, United Arab Emirates", "count": 19 },
+      { "name": "Al Khobar, Saudi Arabia", "count": 7 },
+      { "name": "Manama, Bahrain", "count": 5 }
     ],
     "categories": [
       { "name": "Software & Engineering", "count": 19 },
@@ -15,13 +17,18 @@
       { "name": "Data & Analytics", "count": 29 },
       { "name": "Security", "count": 89 },
       { "name": "Consultancy", "count": 14 },
-      { "name": "Design & UX", "count": 19 }
+      { "name": "Design & UX", "count": 19 },
+      { "name": "Marketing & Sales", "count": 11 },
+      { "name": "Finance & Accounting", "count": 6 }
     ],
     "experience": [
-      { "name": "Senior", "count": 19 },
-      { "name": "Intermediate", "count": 12 },
-      { "name": "Junior", "count": 8 },
-      { "name": "Entry Level", "count": 29 }
+      { "name": "Senior - 5+ years", "count": 19 },
+      { "name": "Mid-Senior - 3+ years", "count": 12 },
+      { "name": "Junior - 1+ years", "count": 8 },
+      { "name": "Entry Level", "count": 29 },
+      { "name": "Internship", "count": 4 },
+      { "name": "Director", "count": 2 },
+      { "name": "Lead", "count": 5 }
     ]
   }
   

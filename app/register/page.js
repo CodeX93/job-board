@@ -16,7 +16,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: '"Geist", "Roboto", "Arial", sans-serif',
   },
 })
 
@@ -26,19 +26,33 @@ export default function RegisterPage() {
       <CssBaseline />
       <Box sx={{ minHeight: "100vh", bgcolor: "background.default" }}>
         <Container maxWidth="xl" sx={{ py: { xs: 2, sm: 4 } }}>
-          <Grid container spacing={4} sx={{ alignItems: "flex-start" }}>
-            {/* Main Form */}
-            <Grid item xs={12} md={8}>
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: { xs: 'column', sm: 'row' },
+              gap: 4,
+              alignItems: 'flex-start',
+            }}
+          >
+            {/* Main Form - 68% width */}
+            <Box sx={{
+              width: { xs: '100%', sm: '68%' },
+              flexShrink: 0,
+            }}>
               <RegisterForm />
-            </Grid>
+            </Box>
 
-            {/* Stats Sidebar */}
-            <Grid item xs={12} md={4}>
-              <Box sx={{ position: { md: "sticky" }, top: { md: 24 } }}>
-                <RegisterStatsSidebar />
-              </Box>
-            </Grid>
-          </Grid>
+            {/* Stats Sidebar - 32% width */}
+            <Box sx={{
+              width: { xs: '100%', sm: '32%' },
+              position: { sm: 'sticky' },
+              top: { sm: 32 },
+              flexShrink: 0,
+              zIndex: 2,
+            }}>
+              <RegisterStatsSidebar />
+            </Box>
+          </Box>
         </Container>
       </Box>
     </ThemeProvider>

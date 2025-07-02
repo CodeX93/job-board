@@ -132,7 +132,9 @@ const HeroSection = () => {
             </Box>{" "}
             With
             <br />
+          <Box component="span" sx={{ color: "#2196F3" }}>
             Precision
+            </Box>{" "}
           </Typography>
 
           <Typography
@@ -232,74 +234,96 @@ const HeroSection = () => {
                 <Card
                   key={job.id}
                   sx={{
-                    minWidth: { xs: "100%", md: "calc(33.333% - 16px)", lg: "calc(33.333% - 16px)" },
-                    bgcolor: "#2196F3",
+                    width: 'auto',
+                    minWidth: 260,
+                    maxWidth: 340,
+                    background: "linear-gradient(135deg, #2196F3 0%, #1E88E5 100%)",
                     color: "white",
                     borderRadius: 3,
                     flexShrink: 0,
+                    border: "1.5px solid #6EC6FF",
+                    boxShadow: "0 2px 12px 0 rgba(33,150,243,0.10)",
+                    height: 'auto',
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "stretch",
+                    p: 2,
                   }}
                 >
-                  <CardContent sx={{ p: 3 }}>
+                  <CardContent
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      flex: 1,
+                      p: 3,
+                      "&:last-child": { pb: 3 },
+                    }}
+                  >
                     <Typography
                       variant="h6"
                       sx={{
-                        fontWeight: "bold",
-                        mb: 1,
-                        fontSize: "1.3rem",
+                        fontWeight: 700,
+                        fontSize: "1.35rem",
+                        mb: 0.5,
+                        color: "white",
+                        lineHeight: 1.2,
                       }}
                     >
                       {job.title}
                     </Typography>
                     <Typography
-                      variant="body1"
+                      variant="subtitle1"
                       sx={{
-                        mb: 2,
-                        opacity: 0.9,
-                        fontSize: "1rem",
+                        color: "#B3E0FF",
+                        fontWeight: 'bolder',
+                        mb: 1.5,
+                        fontSize: "1.05rem",
                       }}
                     >
                       {job.company}
                     </Typography>
-
                     <Box
                       sx={{
                         display: "flex",
                         flexWrap: "wrap",
                         gap: 1,
                         mb: 2,
+                        overflow: "hidden",
+                        maxHeight: "100%",
                       }}
                     >
-                      <Chip
-                        label={job.salary}
-                        sx={{
-                          bgcolor: "rgba(255,255,255,0.2)",
-                          color: "white",
-                          fontWeight: 500,
-                        }}
-                      />
-                      {job.tags.slice(0, 3).map((tag, index) => (
+                      {[job.salary, ...job.tags].map((label, index) => (
                         <Chip
                           key={index}
-                          label={tag}
+                          label={label}
                           sx={{
-                            bgcolor: "rgba(255,255,255,0.2)",
-                            color: "white",
-                            fontSize: "0.75rem",
+                            bgcolor: "#B3E0FF",
+                            color: "#1E3A5C",
+                            fontWeight: 600,
+                            fontSize: "0.78rem",
+                            borderRadius: 2,
+                            px: 0.5,
+                            height: 26,
+                            maxWidth: "100%",
+                            justifyContent: "flex-start",
+                            whiteSpace: "normal",
+                            lineHeight: 1.1,
                           }}
                         />
                       ))}
                     </Box>
-
-                    <Box
+                    <Box sx={{ flex: 1 }} />
+                    <Typography
+                      variant="body2"
                       sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        opacity: 0.9,
+                        color: "#B3E0FF",
+                        fontWeight: 400,
+                        fontSize: "1rem",
+                        mt: 1,
                       }}
                     >
-                      <LocationOnIcon sx={{ fontSize: "1rem", mr: 0.5 }} />
-                      <Typography variant="body2">{job.location}</Typography>
-                    </Box>
+                      {job.location}
+                    </Typography>
                   </CardContent>
                 </Card>
               ))}

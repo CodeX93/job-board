@@ -17,23 +17,9 @@ import {
 } from "@mui/material"
 import { FilterList, ExpandMore } from "@mui/icons-material"
 
-export default function SeekerFilterSidebar({ onCategoryChange, onExperienceChange }) {
-  const [filters, setFilters] = useState({ categories: [], experience: [] })
+export default function SeekerFilterSidebar({ onCategoryChange, onExperienceChange, categories = [], experience = [] }) {
   const [selectedCategory, setSelectedCategory] = useState("")
   const [selectedExperience, setSelectedExperience] = useState("")
-
-  useEffect(() => {
-    const fetchFilters = async () => {
-      try {
-        const response = await fetch((process.env.NEXT_PUBLIC_API_URL || '') + '/seeker-filters.json')
-        const data = await response.json()
-        setFilters(data)
-      } catch (error) {
-        console.error("Error fetching filters:", error)
-      }
-    }
-    fetchFilters()
-  }, [])
 
   const handleCategoryChange = (event) => {
     const value = event.target.value
@@ -55,12 +41,11 @@ export default function SeekerFilterSidebar({ onCategoryChange, onExperienceChan
     <Paper
       sx={{
         width: { xs: "100%", md: 280 },
-        bgcolor: "grey.100",
+        bgcolor: "#fff",
         p: 2,
         borderRadius: 2,
-        boxShadow: "none",
-        border: "1px solid",
-        borderColor: "grey.200",
+        boxShadow: '0 1px 4px rgba(0,0,0,0.06)',
+        border: '1px solid #e0e0e0',
       }}
     >
       <Button
@@ -83,123 +68,146 @@ export default function SeekerFilterSidebar({ onCategoryChange, onExperienceChan
       </Button>
 
       {/* Category Filter */}
-      <Accordion
-        defaultExpanded
-        sx={{
-          boxShadow: "none",
-          "&:before": { display: "none" },
-          bgcolor: "transparent",
-          mb: 2,
-        }}
-      >
-        <AccordionSummary
-          expandIcon={<ExpandMore />}
+      <Paper elevation={1} sx={{ mb: 2, p: 1.5, borderRadius: 4, boxShadow: '0 1px 4px rgba(0,0,0,0.04)', border: '1px solid #e0e0e0', bgcolor: '#fff' }}>
+        <Accordion
+          defaultExpanded
           sx={{
-            px: 0,
-            minHeight: "auto",
-            "& .MuiAccordionSummary-content": { my: 1 },
+            boxShadow: "none",
+            "&:before": { display: "none" },
+            bgcolor: "transparent",
+            mb: 0,
           }}
         >
-          <Typography variant="h6" sx={{ fontWeight: 600, color: "text.primary" }}>
-            Category
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails sx={{ px: 0, pt: 0 }}>
-          <FormControl component="fieldset" fullWidth>
-            <RadioGroup value={selectedCategory} onChange={handleCategoryChange}>
-              {filters.categories.map((category) => (
-                <FormControlLabel
-                  key={category.name}
-                  value={category.name}
-                  control={<Radio size="small" />}
-                  label={
-                    <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" }}>
-                      <Typography variant="body2" sx={{ fontSize: "0.875rem" }}>
-                        {category.name}
-                      </Typography>
-                      <Chip
-                        label={formatCount(category.count)}
-                        size="small"
-                        sx={{
-                          bgcolor: "primary.main",
-                          color: "white",
-                          fontSize: "0.75rem",
-                          height: 20,
-                          minWidth: 28,
-                        }}
-                      />
-                    </Box>
-                  }
-                  sx={{
-                    mx: 0,
-                    mb: 0.5,
-                    "& .MuiFormControlLabel-label": { width: "100%" },
-                  }}
-                />
-              ))}
-            </RadioGroup>
-          </FormControl>
-        </AccordionDetails>
-      </Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMore />}
+            sx={{
+              px: 0,
+              minHeight: "auto",
+              "& .MuiAccordionSummary-content": { my: 1 },
+            }}
+          >
+            <Typography variant="h6" sx={{ fontWeight: 600, color: "text.primary" }}>
+              Category
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails sx={{ px: 0, pt: 0 }}>
+            <FormControl component="fieldset" fullWidth>
+              <RadioGroup value={selectedCategory} onChange={handleCategoryChange}>
+                {categories.map((category) => (
+                  <Box
+                    key={category.name}
+                    sx={{
+                      display: 'grid',
+                      gridTemplateColumns: '20% 60% 20%',
+                      alignItems: 'center',
+                      width: '100%',
+                      mb: 0.5,
+                      pl: 1,
+                      pr: 1,
+                      cursor: 'pointer',
+                      borderRadius: 1,
+                      minHeight: 24,
+                      transition: 'background 0.2s',
+                      '&:hover': { background: '#f3f4f6' },
+                      py: 0.1,
+                    }}
+                    onClick={() => handleCategoryChange({ target: { value: category.name } })}
+                  >
+                    <Radio
+                      checked={selectedCategory === category.name}
+                      value={category.name}
+                      size="small"
+                      sx={{ p: 0.5 }}
+                    />
+                    <Typography
+                      variant="body2"
+                      sx={{ fontSize: '0.875rem', wordBreak: 'break-word', pr: 1 }}
+                    >
+                      {category.name}
+                    </Typography>
+                    <Typography
+                      sx={{ color: 'primary.main', fontWeight: 600, fontSize: '0.85rem', textAlign: 'right' }}
+                    >
+                      {formatCount(category.count)}
+                    </Typography>
+                  </Box>
+                ))}
+              </RadioGroup>
+            </FormControl>
+          </AccordionDetails>
+        </Accordion>
+      </Paper>
 
       {/* Experience Filter */}
-      <Accordion
-        defaultExpanded
-        sx={{
-          boxShadow: "none",
-          "&:before": { display: "none" },
-          bgcolor: "transparent",
-        }}
-      >
-        <AccordionSummary
-          expandIcon={<ExpandMore />}
+      <Paper elevation={1} sx={{ mb: 2, p: 1.5, borderRadius: 4, boxShadow: '0 1px 4px rgba(0,0,0,0.04)', border: '1px solid #e0e0e0', bgcolor: '#fff' }}>
+        <Accordion
+          defaultExpanded
           sx={{
-            px: 0,
-            minHeight: "auto",
-            "& .MuiAccordionSummary-content": { my: 1 },
+            boxShadow: "none",
+            "&:before": { display: "none" },
+            bgcolor: "transparent",
+            mb: 0,
           }}
         >
-          <Typography variant="h6" sx={{ fontWeight: 600, color: "text.primary" }}>
-            Experience
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails sx={{ px: 0, pt: 0 }}>
-          <FormControl component="fieldset" fullWidth>
-            <RadioGroup value={selectedExperience} onChange={handleExperienceChange}>
-              {filters.experience.map((exp) => (
-                <FormControlLabel
-                  key={exp.name}
-                  value={exp.name}
-                  control={<Radio size="small" />}
-                  label={
-                    <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" }}>
-                      <Typography variant="body2" sx={{ fontSize: "0.875rem" }}>
-                        {exp.name}
-                      </Typography>
-                      <Chip
-                        label={formatCount(exp.count)}
-                        size="small"
-                        sx={{
-                          bgcolor: "primary.main",
-                          color: "white",
-                          fontSize: "0.75rem",
-                          height: 20,
-                          minWidth: 28,
-                        }}
-                      />
-                    </Box>
-                  }
-                  sx={{
-                    mx: 0,
-                    mb: 0.5,
-                    "& .MuiFormControlLabel-label": { width: "100%" },
-                  }}
-                />
-              ))}
-            </RadioGroup>
-          </FormControl>
-        </AccordionDetails>
-      </Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMore />}
+            sx={{
+              px: 0,
+              minHeight: "auto",
+              "& .MuiAccordionSummary-content": { my: 1 },
+            }}
+          >
+            <Typography variant="h6" sx={{ fontWeight: 600, color: "text.primary" }}>
+              Experience
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails sx={{ px: 0, pt: 0 }}>
+            <FormControl component="fieldset" fullWidth>
+              <RadioGroup value={selectedExperience} onChange={handleExperienceChange}>
+                {experience.map((exp) => (
+                  <Box
+                    key={exp.name}
+                    sx={{
+                      display: 'grid',
+                      gridTemplateColumns: '20% 60% 20%',
+                      alignItems: 'center',
+                      width: '100%',
+                      mb: 0.5,
+                      pl: 1,
+                      pr: 1,
+                      cursor: 'pointer',
+                      borderRadius: 1,
+                      minHeight: 24,
+                      transition: 'background 0.2s',
+                      '&:hover': { background: '#f3f4f6' },
+                      py: 0.1,
+                    }}
+                    onClick={() => handleExperienceChange({ target: { value: exp.name } })}
+                  >
+                    <Radio
+                      checked={selectedExperience === exp.name}
+                      value={exp.name}
+                      size="small"
+                      sx={{ p: 0.5 }}
+                    />
+                    <Typography
+                      variant="body2"
+                      sx={{ fontSize: '0.875rem', wordBreak: 'break-word', pr: 1 }}
+                    >
+                      {exp.name}
+                    </Typography>
+                    <Typography
+                      sx={{ color: 'primary.main', fontWeight: 600, fontSize: '0.85rem', textAlign: 'right' }}
+                    >
+                      {formatCount(exp.count)}
+                    </Typography>
+                  </Box>
+                ))}
+              </RadioGroup>
+            </FormControl>
+          </AccordionDetails>
+        </Accordion>
+      </Paper>
     </Paper>
   )
 }

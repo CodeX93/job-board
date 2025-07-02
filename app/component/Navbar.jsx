@@ -55,18 +55,28 @@ const Navbar = () => {
           borderBottom: "1px solid #e0e0e0",
         }}
       >
-        <Box sx={{ display: "flex", alignItems: "center" }}>
-          <Link href="/home" style={{ textDecoration: "none" }}>
-            <Image
-              src="/careerdna-logo.png"
-              alt="CareerDNA Logo"
-              width={160}
-              height={44}
-              style={{ objectFit: "contain", display: "block" }}
-              priority
-            />
-          </Link>
-        </Box>
+     <Box
+  sx={{
+    width: { xs: 0, sm: 120, md: 160 }, // Smaller on mobile (xs)
+    height: "auto",
+  }}
+>
+  <Image
+    src="/careerdna-logo.png"
+    alt="CareerDNA Logo"
+    width={120}
+    height={34}
+    priority
+    style={{
+      objectFit: "contain",
+      display: "block",
+      width: "100%",   // Scale based on wrapper
+      height: "auto",
+    }}
+  />
+</Box>
+
+
         <IconButton onClick={handleDrawerToggle}>
           <CloseIcon />
         </IconButton>

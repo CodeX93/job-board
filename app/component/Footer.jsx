@@ -6,6 +6,7 @@ import TwitterIcon from "@mui/icons-material/Twitter"
 import FacebookIcon from "@mui/icons-material/Facebook"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
 import InstagramIcon from "@mui/icons-material/Instagram"
+import Image from "next/image"
 
 const Footer = () => {
   const [footerData, setFooterData] = useState(null)
@@ -74,38 +75,15 @@ const Footer = () => {
           {/* Logo and Social Icons */}
           <Box>
             <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
-              <Box
-                component="div"
-                sx={{
-                  width: 40,
-                  height: 40,
-                  background: "linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)",
-                  borderRadius: "8px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  mr: 1.5,
-                  position: "relative",
-                  "&::before": {
-                    content: '""',
-                    position: "absolute",
-                    width: "60%",
-                    height: "60%",
-                    background: "white",
-                    borderRadius: "50%",
-                    opacity: 0.3,
-                  },
-                }}
+              <Image
+                src="/logo_dark.png"
+                alt="CareerDNA Logo"
+                width={180}
+                height={90}
+                style={{ marginRight: 16, borderRadius: 8 }}
+                priority
               />
-              <Typography
-                variant="h6"
-                sx={{
-                  fontWeight: "bold",
-                  fontSize: "1.5rem",
-                }}
-              >
-                CareerDNA
-              </Typography>
+             
             </Box>
 
             {/* Social Icons */}
